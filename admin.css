@@ -1,0 +1,215 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #090909;
+  color: #f7f7f7;
+  font-family: "DM Sans", sans-serif;
+}
+
+.admin-shell {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 38px 24px 80px;
+}
+
+.back-link {
+  color: #bbb;
+  text-decoration: none;
+  font-size: 13px;
+}
+.back-link:hover {
+  color: #fff;
+}
+
+.admin-shell header {
+  margin: 36px 0 28px;
+}
+.eyebrow {
+  color: #1ed760;
+  font-size: 10px;
+  letter-spacing: 1.7px;
+  font-weight: 700;
+}
+.admin-shell h1 {
+  font:
+    800 42px "Manrope",
+    sans-serif;
+  margin: 8px 0;
+}
+.muted {
+  color: #aaa;
+}
+
+.panel {
+  background: #151515;
+  border: 1px solid #292929;
+  border-radius: 12px;
+  padding: 24px;
+  margin-top: 18px;
+}
+
+.panel h2 {
+  font:
+    700 19px "Manrope",
+    sans-serif;
+  margin: 0 0 20px;
+}
+.panel form {
+  display: grid;
+  gap: 15px;
+}
+.panel label {
+  display: grid;
+  gap: 8px;
+  color: #ddd;
+  font-size: 13px;
+}
+
+.panel input {
+  width: 100%;
+  padding: 12px 13px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background: #222;
+  color: #fff;
+  font: inherit;
+}
+.panel input:focus {
+  outline: 1px solid #1ed760;
+  border-color: #1ed760;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.submit-button {
+  justify-self: start;
+  background: #1ed760;
+  color: #07150c;
+  border: 0;
+  border-radius: 24px;
+  padding: 12px 23px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.submit-button:disabled {
+  opacity: 0.55;
+  cursor: wait;
+}
+.form-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.cancel-button {
+  background: transparent;
+  color: #ddd;
+  border: 1px solid #555;
+  border-radius: 24px;
+  padding: 11px 18px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.cancel-button:hover {
+  border-color: #fff;
+  color: #fff;
+}
+
+.message {
+  min-height: 16px;
+  margin: 0;
+  color: #aaa;
+  font-size: 13px;
+}
+.message.error {
+  color: #ff7777;
+}
+.message.success {
+  color: #1ed760;
+}
+
+.admin-list {
+  display: grid;
+  gap: 10px;
+}
+.admin-song {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 10px;
+  background: #202020;
+  border-radius: 8px;
+}
+.admin-song img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 4px;
+  background: #333;
+}
+.admin-song div {
+  flex: 1;
+  min-width: 0;
+}
+.admin-song strong,
+.admin-song span {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.admin-song span {
+  margin-top: 4px;
+  color: #aaa;
+  font-size: 12px;
+}
+
+.delete-button {
+  color: #ff8b8b;
+  background: transparent;
+  border: 1px solid #5e3636;
+  border-radius: 18px;
+  padding: 7px 12px;
+  cursor: pointer;
+}
+.delete-button:hover {
+  background: #5e3636;
+  color: #fff;
+}
+.edit-button {
+  color: #1ed760;
+  background: transparent;
+  border: 1px solid #286a42;
+  border-radius: 18px;
+  padding: 7px 12px;
+  cursor: pointer;
+}
+.edit-button:hover {
+  background: #286a42;
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .admin-shell {
+    padding: 25px 16px 55px;
+  }
+  .admin-shell h1 {
+    font-size: 34px;
+  }
+  .panel {
+    padding: 18px;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}

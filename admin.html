@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#121212" />
+
+    <!-- Meta Tags PWA -->
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="apple-touch-icon" href="./spotify.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+
+    <title>Espaço ADM — Spotify</title>
+    <link rel="stylesheet" href="./admin.css" />
+  </head>
+  <body>
+    <main class="admin-shell">
+      <a class="back-link" href="./">← Voltar à biblioteca</a>
+      <header>
+        <p class="eyebrow">PAINEL DE CONTROLO</p>
+        <h1>Espaço ADM</h1>
+        <p>
+          Registe uma faixa com o link do áudio e um ficheiro de imagem para ela
+          aparecer na biblioteca.
+        </p>
+      </header>
+
+      <section class="panel">
+        <h2 id="titulo-formulario">Adicionar música</h2>
+        <form id="music-form">
+          <label
+            >Nome da música
+            <input
+              name="nome"
+              required
+              maxlength="120"
+              placeholder="Ex.: Nome da faixa"
+            />
+          </label>
+
+          <label
+            >Artista
+            <input
+              name="artista"
+              required
+              maxlength="120"
+              placeholder="Ex.: Nome do artista"
+            />
+          </label>
+
+          <label
+            >Género
+            <input
+              name="genero"
+              required
+              maxlength="60"
+              placeholder="Ex.: Pop, Rock, MPB"
+            />
+          </label>
+
+          <div class="form-row">
+            <label
+              >Link do áudio (URL MP3)
+              <input
+                name="arquivo"
+                type="url"
+                required
+                placeholder="https://exemplo.com/musica.mp3"
+              />
+            </label>
+
+            <label>
+              <span id="texto-capa">Capa do álbum</span>
+              <input name="capa" type="file" accept="image/*" required />
+            </label>
+          </div>
+
+          <label
+            >Duração
+            <input
+              name="duracao"
+              type="text"
+              required
+              maxlength="8"
+              placeholder="Ex.: 3:45"
+            />
+          </label>
+
+          <p id="form-message" class="message" role="status"></p>
+          <div class="form-buttons">
+            <button id="botao-salvar" class="submit-button" type="submit">
+              Guardar música
+            </button>
+            <button
+              id="botao-cancelar"
+              class="cancel-button"
+              type="button"
+              hidden
+            >
+              Cancelar edição
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <section class="panel">
+        <h2>Músicas registadas</h2>
+        <div id="admin-list" class="admin-list">
+          <p class="muted">A carregar…</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Ficheiro JS Externo -->
+    <script type="module" src="./admin.js"></script>
+  </body>
+</html>
